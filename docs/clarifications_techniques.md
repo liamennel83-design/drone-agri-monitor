@@ -1,5 +1,5 @@
 # Clarifications Techniques
-## Binôme A — Points à approfondir
+## Binôme A : Points à approfondir
 
 ---
 
@@ -263,4 +263,4 @@ Tension (V)
 ---
 
 *Document créé le 10 juillet 2026*
-*Binôme A — Clarifications techniques*
+*Binôme A : Clarifications techniques*
