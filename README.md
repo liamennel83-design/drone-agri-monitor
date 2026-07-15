@@ -1,7 +1,6 @@
 # Drone Autonome - Detection Stress Hydrique
 
-Binome A - L3 EIT - ESP Antsiranana - 2026
-FANOGNY Hernandez Liwingston & RAKOTONIRINA Ny Antso Fyh Arihvony
+Binome A
 
 ## Materiel
 - Pydrone 01Studio ESP32-S3
