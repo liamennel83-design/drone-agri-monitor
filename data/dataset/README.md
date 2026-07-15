@@ -34,5 +34,4 @@ Le fichier `metadata.json` contient :
 
 ---
 
-*Dataset créé le 10 juillet 2026*
 *Binôme A — Projet Robot Aérien Autonome*
