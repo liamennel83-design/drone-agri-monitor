@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Consolidateur de métadonnées du dataset — Binôme A
+Consolidateur de métadonnées du dataset - Binôme A
 ==================================================
 Corrige la faille P0-1 de l'audit : plusieurs sources contradictoires
 (metadata.json: 60 images 30/30 ; metadata_parcelle.json: 50 images 25/25 ;

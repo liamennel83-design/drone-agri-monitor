@@ -1,4 +1,4 @@
-# Module Simulation — Sous-Projet 1 : Trajectoires
+# Module Simulation - Sous-Projet 1 : Trajectoires
 
 Ce dossier contient les modules de planification et simulation de trajectoires pour le drone Pydrone.
 
@@ -74,4 +74,4 @@ result = simulator.simulate_continuous_flight(plan['waypoints'], plan['num_photo
 ---
 
 *Module créé le 14 juillet 2026*
-*Binôme A — Sous-Projet 1 : Trajectoires*
+*Binôme A - Sous-Projet 1 : Trajectoires*

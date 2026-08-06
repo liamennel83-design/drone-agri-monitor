@@ -42,7 +42,7 @@
 ## 2. Corrections de Style
 
 ### Suppressions
-- Tous les tirets cadratins (—) remplacés par des tirets normaux (-)
+- Tous les tirets cadratins (-) remplacés par des tirets normaux (-)
 - Tous les signes génériques supprimés
 - Noms propres retirés (seulement "Binôme A")
 

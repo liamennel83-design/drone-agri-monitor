@@ -4,7 +4,7 @@
 Script de Collecte et Annotation d'Images de Tomates
 
 Projet : Suivi du stress hydrique par imagerie aérienne
-Binôme A — Fyh & Liwingston
+Binôme A - Fyh & Liwingston
 
 Ce script permet de :
 - Télécharger des images de tomates depuis le web

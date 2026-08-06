@@ -24,4 +24,4 @@ Ce dossier contient la documentation technique du projet.
 ---
 
 *Documentation créée le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+*Binôme A - Projet Robot Aérien Autonome*

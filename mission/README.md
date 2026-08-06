@@ -1,4 +1,4 @@
-# Mission — Code Vol MicroPython
+# Mission - Code Vol MicroPython
 
 Ce dossier contient le code MicroPython pour le drone Pydrone.
 
@@ -44,4 +44,4 @@ mission/
 ---
 
 *Mission créée le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+*Binôme A - Projet Robot Aérien Autonome*

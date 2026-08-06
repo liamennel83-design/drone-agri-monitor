@@ -1,5 +1,5 @@
-# Paramètres Optimaux — Parcelle Réelle 1m × 2m
-## Binôme A — Projet Robot Aérien Autonome
+# Paramètres Optimaux - Parcelle Réelle 1m × 2m
+## Binôme A - Projet Robot Aérien Autonome
 
 ---
 
@@ -197,4 +197,4 @@ Statut : ✅ FAISABLE (mais moins efficace)
 ---
 
 *Document créé le 14 juillet 2026*
-*Binôme A — Paramètres optimaux parcelle 1m × 2m*
+*Binôme A - Paramètres optimaux parcelle 1m × 2m*

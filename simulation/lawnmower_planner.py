@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Algorithme Lawnmower (Boustrophédon) — Planification de Trajectoires
+Algorithme Lawnmower (Boustrophédon) - Planification de Trajectoires
 Binôme A - Fyh & Liwingston
 
 Référence : Choset, H. (2001). "Coverage for robotics."

@@ -1,4 +1,4 @@
-# Web — Interface Flask et Leaflet
+# Web - Interface Flask et Leaflet
 
 Ce dossier contient l'interface web pour la supervision du drone.
 
@@ -29,4 +29,4 @@ web/
 ---
 
 *Web créé le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+*Binôme A - Projet Robot Aérien Autonome*

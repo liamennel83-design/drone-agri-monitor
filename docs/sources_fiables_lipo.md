@@ -1,5 +1,5 @@
-# Sources Fiables — Courbe de Décharge LiPo
-## Binôme A — Projet Robot Aérien Autonome
+# Sources Fiables - Courbe de Décharge LiPo
+## Binôme A - Projet Robot Aérien Autonome
 
 ---
 
@@ -11,7 +11,7 @@ Les liens précédents (Ampow, letusrc) ne fonctionnent plus ou sont instables. 
 
 ## 📚 Sources Vérifiées
 
-### Source 1 : WhaleBattery (2026) — RECOMMANDÉE
+### Source 1 : WhaleBattery (2026) - RECOMMANDÉE
 **Lien** : https://www.whalebattery.com/blog-detail/lipo-battery-voltage
 
 **Données extraites** :
@@ -46,7 +46,7 @@ Les liens précédents (Ampow, letusrc) ne fonctionnent plus ou sont instables. 
 - 4.20V/cell = full (standard LiPo)
 - 3.7V/cell = nominal label (not a reliable "battery %")
 - 3.5V/cell = late-pack warning
-- 3.2–3.3V/cell (rebound/resting) = practical stop line
+- 3.2-3.3V/cell (rebound/resting) = practical stop line
 
 ---
 
@@ -60,7 +60,7 @@ Les liens précédents (Ampow, letusrc) ne fonctionnent plus ou sont instables. 
 
 ---
 
-### Source 4 : usedbytes (2019) — Données mesurées
+### Source 4 : usedbytes (2019) - Données mesurées
 **Lien** : https://blog.usedbytes.com/2019/03/battery-discharge-profile/
 
 **Points clés** :
@@ -70,7 +70,7 @@ Les liens précédents (Ampow, letusrc) ne fonctionnent plus ou sont instables. 
 
 ---
 
-### Source 5 : Electronics StackExchange — Formule mathématique
+### Source 5 : Electronics StackExchange - Formule mathématique
 **Lien** : https://electronics.stackexchange.com/questions/435837/calculate-battery-percentage-on-lipo-battery
 
 **Formule empirique** :
@@ -178,4 +178,4 @@ Tension (V)
 ---
 
 *Document créé le 14 juillet 2026*
-*Binôme A — Sources fiables LiPo*
+*Binôme A - Sources fiables LiPo*

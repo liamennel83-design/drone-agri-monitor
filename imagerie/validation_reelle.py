@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Validation RÉELLE du classificateur de stress hydrique — Binôme A
+Validation RÉELLE du classificateur de stress hydrique - Binôme A
 =================================================================
 
 Pourquoi ce script existe
@@ -16,9 +16,14 @@ Ce script corrige la faille :
   MCC, IC bootstrap)                     ->  comparaison à une baseline
   par seuils (la règle que le RandomForest doit au moins battre).
 
-Conventions (une seule source de vérité — corrige l'incohérence de signe) :
+Conventions (une seule source de vérité) :
   ExG  = 2*G - R - B                  (Woebbecke et al., 1995)
-  GRVI = (G - R) / (G + R)            (sens retenu dans le rapport S13-S14)
+  GRVI = (R - G) / (R + G)            (convention du code embarqué
+           stress_detector.py, lignes 95 et 118 ; végétation saine -> GRVI
+           négatif, végétation stressée -> GRVI qui remonte vers 0 et au-delà)
+  NOTE : le rapport S13-S14 (paragraphe 4.3) écrit (G - R)/(G + R), signe
+  inverse. Le code et le modèle stress_rf_v1.pkl font foi : c'est le
+  rapport qui doit être corrigé, pas le code.
 
 Attendu en entrée
 -----------------
@@ -33,7 +38,7 @@ Sortie : models/validation_reelle_results.json  (+ figures si matplotlib OK)
 
 Usage :  python imagerie/validation_reelle.py [--dataset data/dataset]
 
-Binôme A — ESP Antsiranana — août 2026
+Binôme A - ESP Antsiranana - août 2026
 """
 
 import argparse
@@ -56,16 +61,16 @@ MIN_PER_CLASS_WARN = 30
 # ---------------------------------------------------------------------------
 
 def compute_indices(img_bgr: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    """ExG (float, centré ~0 en [-2, 2] après normalisation) et GRVI ∈ [-1, 1].
+    """ExG (float, centré ~0 en [-1, 1] après normalisation) et GRVI ∈ [-1, 1].
 
-    Convention unique : GRVI = (G - R) / (G + R).
+    Convention unique, alignée sur stress_detector.py : GRVI = (R - G)/(R + G).
     Les canaux sont normalisés en [0, 1] pour que les seuils 0.2 / 0.15
     (cf. models/stress_rf_v1_meta.json) restent valables.
     """
     img = img_bgr.astype(np.float32) / 255.0
     b, g, r = img[..., 0], img[..., 1], img[..., 2]
-    exg = (2.0 * g - r - b) / 2.0                    # borne [-1, 1] -> OK vs seuil 0.2
-    grvi = (g - r) / np.clip(g + r, 1e-6, None)
+    exg = (2.0 * g - r - b) / 2.0
+    grvi = (r - g) / np.clip(r + g, 1e-6, None)
     return exg, grvi
 
 
@@ -136,13 +141,14 @@ def make_rf():
 
 
 class ThresholdBaseline:
-    """Règle experte : stressé si ExG_moyen < 0.2 ET GRVI_moyen < 0.15.
+    """Règle experte alignée sur stress_detector.py : stressé si
+    ExG_moyen < 0.2 ET GRVI_moyen > 0.15 (GRVI en convention R-G).
     Le RandomForest DOIT battre cette baseline, sinon il n'apporte rien."""
     def fit(self, X, y):
         return self
 
     def predict(self, X):
-        return ((X[:, 0] < EXG_THRESHOLD) & (X[:, 2] < GRVI_THRESHOLD)).astype(int)
+        return ((X[:, 0] < EXG_THRESHOLD) & (X[:, 2] > GRVI_THRESHOLD)).astype(int)
 
 
 # ---------------------------------------------------------------------------
@@ -259,7 +265,7 @@ def main() -> int:
         "date": datetime.now().isoformat(),
         "conventions": {
             "ExG": "2*G - R - B (canaux normalisés [0,1], sortie divisée par 2)",
-            "GRVI": "(G - R) / (G + R)   <- convention du rapport S13-S14 (signe unifié)",
+            "GRVI": "(R - G) / (R + G)   <- convention du code stress_detector.py (signe unifié)",
         },
         "dataset": {
             "n_images": int(len(X)),
@@ -278,7 +284,7 @@ def main() -> int:
     print("  F1 (poolé) :", results["baseline_seuils"]["logo"]
           ["metriques_global(poolées)__LECTURE_PRINCIPALE"]["f1"])
 
-    print("\n=== 2/3 RandomForest — validation L.O.Group.Out ===")
+    print("\n=== 2/3 RandomForest - validation L.O.Group.Out ===")
     results["random_forest"] = {
         "hyperparametres": {"n_estimators": 150, "max_depth": 6,
                             "min_samples_leaf": 3, "seed": SEED},
@@ -307,7 +313,7 @@ def main() -> int:
                      "Toute valeur antérieure (1.000 ; 0.366) venait de features synthétiques.",
     }
     print(f"\n>>> Verdict : F1={verdict_f1:.3f} "
-          f"({'OK' if verdict_f1 > 0.70 else 'SOUS LE CRITÈRE 0.70 — à traiter dans le rapport'})")
+          f"({'OK' if verdict_f1 > 0.70 else 'SOUS LE CRITÈRE 0.70 - à traiter dans le rapport'})")
 
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:

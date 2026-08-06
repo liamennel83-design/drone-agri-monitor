@@ -1,5 +1,5 @@
 # Justification Détaillée des Valeurs Techniques
-## Document Scientifique — Binôme A
+## Document Scientifique - Binôme A
 
 ---
 
@@ -316,4 +316,4 @@ Où :
 ---
 
 *Document créé le 13 juillet 2026*
-*Binôme A — Justification des valeurs techniques*
+*Binôme A - Justification des valeurs techniques*

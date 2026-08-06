@@ -1,4 +1,4 @@
-# Module Imagerie — Traitement d'Images
+# Module Imagerie - Traitement d'Images
 
 Ce dossier contient les modules de traitement d'images pour la détection du stress hydrique.
 
@@ -36,4 +36,4 @@ GRVI = (R - G) / (R + G)
 ---
 
 *Module créé le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+*Binôme A - Projet Robot Aérien Autonome*

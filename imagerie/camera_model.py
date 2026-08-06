@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Modélisation Optique et Photogrammétrique — Caméra OV2640 (Pydrone)
+Modélisation Optique et Photogrammétrique - Caméra OV2640 (Pydrone)
 
 Projet : Suivi du stress hydrique par imagerie aérienne
-Binôme A — Fyh & Liwingston
+Binôme A - Fyh & Liwingston
 
 Ce module calcule :
 - Le Ground Sampling Distance (GSD) en fonction de l'altitude

@@ -4,7 +4,7 @@
 Entraînement du Classificateur de Stress Hydrique
 
 Projet : Suivi du stress hydrique par imagerie aérienne
-Binôme A — Fyh & Liwingston
+Binôme A - Fyh & Liwingston
 
 Ce module implémente :
 - Entraînement d'un classificateur RandomForest

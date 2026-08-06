@@ -1,4 +1,4 @@
-# Résultats — Sorties du Projet
+# Résultats - Sorties du Projet
 
 Ce dossier contient les résultats générés par les scripts.
 
@@ -38,4 +38,4 @@ resultats/
 ---
 
 *Résultats créés le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+*Binôme A - Projet Robot Aérien Autonome*

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Module de Traitement d'Images — Détection du Stress Hydrique
+Module de Traitement d'Images - Détection du Stress Hydrique
 
 Projet : Suivi du stress hydrique par imagerie aérienne
-Binôme A — Fyh & Liwingston
+Binôme A - Fyh & Liwingston
 
 Ce module implémente :
 - Calcul de l'indice ExG (Excess Green)
@@ -245,7 +245,7 @@ def main():
     """Fonction de test et démonstration"""
     
     print("=" * 60)
-    print("DÉTECTEUR DE STRESS HYDRIQUE — Double Indice")
+    print("DÉTECTEUR DE STRESS HYDRIQUE - Double Indice")
     print("=" * 60)
     print()
     

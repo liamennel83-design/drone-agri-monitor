@@ -1,4 +1,4 @@
-# Scripts — Outils et Utilitaires
+# Scripts - Outils et Utilitaires
 
 Ce dossier contient les scripts utilitaires pour le projet.
 
@@ -26,4 +26,4 @@ python scripts/collecte_images.py <dossier_source> <categorie>
 ---
 
 *Scripts créés le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+*Binôme A - Projet Robot Aérien Autonome*

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Simulateur de Vol — Validation des Trajectoires
+Simulateur de Vol - Validation des Trajectoires
 Binôme A - Fyh & Liwingston
 
 Simule le vol du drone Pydrone sur une trajectoire Lawnmower
