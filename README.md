@@ -53,8 +53,13 @@ simulation/
   lawnmower_planner.py        génération de la trajectoire de couverture
   trajectory_optimizer.py     optimisation multi-critères
   flight_simulator.py         simulation cinématique
-mission/                      code MicroPython embarqué (en cours de réintégration)
-web/                          station sol : serveur et interface cartographique (en cours)
+  modele_matlab.m             modèle MATLAB (UAV Toolbox)
+mission/
+  main.py                     code de vol MicroPython (WiFi, WebSocket,
+                              calibration, télémétrie, seuils batterie ;
+                              voir mission/README.md pour la configuration)
+web/
+  app_flask.py                station sol "Mission Planner" (Flask + Leaflet)
 data/dataset/
   healthy/  stressed/         images (25 + 25 synthétiques actuellement,
                               remplacement par données réelles en cours)

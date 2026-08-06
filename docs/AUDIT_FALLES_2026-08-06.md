@@ -33,8 +33,9 @@ La plantation n'a pas eu lieu. La cible retenue est l'achat de 24 plants de toma
 ### P0.5 Navigation IMU + ArUco non encore validée par les encadrants
 La correction du centre de gravité a été testée après retrait du module GPS (5,3 g). Décision en attente de présentation : navigation intérieure par IMU (MPU6050) + marqueurs ArUco avec filtre de Kalman. Tant que cette approche n'est pas validée, la trajectoire Lawmower autonome reste en suspens ; le filet de sécurité est l'acquisition statique manuelle à 0,70 m (voir Plan, scénario B).
 
-### P0.6 Code de vol introuvable dans le dépôt
-`mission/` et `web/` ne contiennent que des README. Le code MicroPython embarqué (connexion WiFi, WebSocket, calibration, boucle de mission) n'apparaît ni dans le dépôt ni dans l'archive analysée. Le livrable "code source complet" n'est pas reconstituable en l'état.
+### P0.6 Code de vol introuvable dans le dépôt (résolu le 6 août)
+`mission/` et `web/` ne contiennent que des README. Le code MicroPython embarqué (connexion WiFi, WebSocket, calibration, boucle de mission) n'apparaissait ni dans le dépôt ni dans l'archive analysée.
+Résolution : récupération depuis le dépôt de travail de Liwingston (Robot_aerien1) et intégration de `mission/main.py` (code de vol MicroPython), `web/app_flask.py` (station sol Flask/Leaflet) et `simulation/modele_matlab.m`. Deux écarts paramétriques relevés à la relecture (voir P1.8) : altitude cible 80 cm dans le code contre 70 cm dans le plan optique, et seuils batterie exprimés en pourcentage dans le code contre des tensions dans le rapport.
 
 ## P1. Incohérences techniques à corriger dans les documents
 
@@ -47,6 +48,7 @@ La correction du centre de gravité a été testée après retrait du module GPS
 | P1.5 | Chaîne vision annoncée à 30 Hz | Rapport §3.4.5 | L'ESP32-S3 ne streame pas du 2 MP à 30 Hz ; annoncer honnêtement une correction vision à 1-2 Hz, IMU pour la prophétie haute fréquence ; les paramètres Q et R du filtre de Kalman doivent être mesurés, pas choisis |
 | P1.6 | Tableau des courbes d'apprentissage incohérent avec le JSON | Rapport §4.4.4 tailles 10/20/30/60 ; JSON : [9, 19, 28, 38, 48] | Reporter les tailles réelles du JSON |
 | P1.7 | Poussée moteur jamais mesurée | "T_max = 0,72 N estimé" ; question en suspens depuis deux rapports | Mesure à la balance (drone à l'envers, 15 minutes) ; question probable du jury |
+| P1.8 | Paramètres vol incohérents entre code et plan optique | mission/main.py : ALTITUDE_CIBLE_CM = 80 (plan : 70 cm), seuils batterie en % (rapport : tensions) | Aligner ALTITUDE_CIBLE_CM = 70 avant les acquisitions ; harmoniser % et tensions batterie avec une mesure de correspondance |
 
 ## P2. Renforts scientifiques recommandés
 
