@@ -1,32 +1,16 @@
-# Web — Interface Flask et Leaflet
+# Interface de supervision
 
-Ce dossier contient l'interface web pour la supervision du drone.
+Ce dossier est réservé à l'interface de contrôle et de visualisation de la station sol.
 
-## Structure
+Aucune application Flask ou Leaflet n'est actuellement versionnée dans ce dépôt. Les fonctionnalités de planification de mission, de télémétrie et de carte de stress restent à intégrer lorsque le code de la station sol sera disponible.
 
-```
-web/
-├── page.py           # Serveur Flask principal
-├── templates/        # Templates HTML
-└── static/           # Fichiers statiques (CSS, JS)
-```
+## Éléments attendus
 
-## Interface Web
+- Point d'entrée Flask.
+- Interface de commandes de sécurité : décollage, stationnaire, atterrissage.
+- Affichage de télémétrie avec horodatage.
+- Import de résultats d'imagerie pour une future carte de stress.
 
-### page.py
-- Serveur Flask avec WebSocket
-- Carte Leaflet.js pour la visualisation
-- Gestion des waypoints (sauvegarde, chargement)
-- Interface de contrôle du drone
+## Sécurité
 
-## Fonctionnalités
-
-- Visualisation en temps réel de la position du drone
-- Affichage des waypoints et de la trajectoire
-- Tableau de bord de télémétrie
-- Terminal de commandes manuelles
-
----
-
-*Web créé le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+Ne pas enregistrer de mot de passe Wi-Fi, de clé API ou d'adresse privée dans les fichiers versionnés.

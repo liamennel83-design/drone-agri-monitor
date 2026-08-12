@@ -1,17 +1,13 @@
 {
-  "date_creation": "2026-07-13T16:24:35.184035",
-  "projet": "Robot Aérien Autonome - Stress Hydrique",
-  "binome": "A (Fyh & Liwingston)",
-  "images_saines": 30,
-  "images_stressees": 30,
-  "total_images": 60,
-  "sources": [
-    {
-      "type": "synthétique_enrichi",
-      "description": "Images réalistes générées par simulation avec variations aléatoires",
-      "date": "2026-07-13T16:24:35.521585",
-      "n_healthy": 30,
-      "n_stressed": 30
-    }
-  ]
+  "generated_at": "2026-08-12T03:07:23.471878+00:00",
+  "project": "Drone autonome pour le suivi du stress hydrique",
+  "dataset_status": "synthetic_demo",
+  "images_healthy": 25,
+  "images_stressed": 25,
+  "total_images": 50,
+  "folders": {
+    "healthy": "healthy",
+    "stressed": "stressed"
+  },
+  "note": "Les données actuelles sont des images synthétiques de démonstration. Les acquisitions réelles doivent être annotées dans plants_mapping.csv."
 }

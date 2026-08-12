@@ -1,47 +1,16 @@
-# Mission — Code Vol MicroPython
+# Module de vol embarqué
 
-Ce dossier contient le code MicroPython pour le drone Pydrone.
+Ce dossier est réservé au code MicroPython réellement déployé sur le Pydrone ESP32-S3.
 
-## Structure
+Aucun firmware de vol n'est actuellement versionné dans ce dépôt. Les fichiers décrits dans une ancienne version de cette documentation ne sont donc pas annoncés comme disponibles.
 
-```
-mission/
-├── firmware.py       # Firmware principal
-├── config.py         # Configuration du drone
-├── navigation.py     # Algorithmes de navigation
-└── communication.py  # Communication WebSocket
-```
+## À intégrer avant la remise
 
-## Firmware Principal
+- Point d'entrée MicroPython utilisé lors du dernier essai.
+- Configuration matérielle réellement embarquée : caméra, IMU, GPS si présent, batterie.
+- Paramètres de sécurité : altitude, durée de stationnaire, seuil de batterie, comportement en cas de perte de communication.
+- Protocole de commandes entre la station sol et le drone.
 
-### firmware.py
-- Initialisation des capteurs (MPU6050, SPL06, GPS)
-- Boucle principale de vol
-- Gestion des commandes (takeoff, land, hover)
-- Communication WebSocket avec le serveur
+## Règle de traçabilité
 
-## Configuration
-
-### config.py
-- Paramètres du drone (masse, dimensions)
-- Paramètres de vol (altitude, vitesse)
-- Seuils de sécurité (batterie, Wi-Fi)
-
-## Navigation
-
-### navigation.py
-- Algorithme Lawnmower
-- Suivi de waypoints
-- Correction de dérive (pitch, roll)
-
-## Communication
-
-### communication.py
-- Serveur WebSocket
-- Protocole JSON
-- Gestion des commandes et télémétrie
-
----
-
-*Mission créée le 10 juillet 2026*
-*Binôme A — Projet Robot Aérien Autonome*
+Toute version testée doit être copiée dans ce dossier avec une date, puis associée à une fiche d'essai décrivant le résultat observé.

@@ -1,10 +1,18 @@
-_pycache_/
-*.pyc
+__pycache__/
+*.py[cod]
 venv/
+.venv/
 .env
 *.pkl
 *.mat
 *.asv
+
+# Données et résultats volumineux générés localement
 data/images/
 resultats/*.png
 resultats/*.csv
+models/validation_reelle_results.json
+
+# Secrets et paramètres locaux
+secrets.*
+*.local
