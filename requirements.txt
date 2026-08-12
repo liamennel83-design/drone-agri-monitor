@@ -16,6 +16,7 @@ opencv-python-headless==4.13.0.92
 packaging==26.2
 pillow==12.2.0
 pyparsing==3.3.2
+python-docx==1.2.0
 python-dateutil==2.9.0.post0
 scikit-learn==1.8.0
 scipy==1.17.1

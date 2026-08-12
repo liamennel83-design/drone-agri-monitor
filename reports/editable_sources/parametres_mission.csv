@@ -1,0 +1,9 @@
+parametre,valeur,unite,statut,source
+Parcelle,1 x 2,m,retenu,metadata_parcelle.json
+Nombre de pots,12,pots,retenu,metadata_parcelle.json
+Altitude de prise de vue,0.70,m,a confirmer en essai,docs/parametres_optimaux_parcelle_1x2m.md
+GSD calcule,0.44,mm par pixel,simule,docs/parametres_optimaux_parcelle_1x2m.md
+Vitesse de vol,0.20,m par seconde,a confirmer en essai,docs/parametres_optimaux_parcelle_1x2m.md
+Recouvrement frontal,75,pourcent,simule,simulation
+Recouvrement lateral,65,pourcent,simule,simulation
+Seuil retour securise,3.65,V,a mesurer sous charge,docs/plan_corrections_finales.md
